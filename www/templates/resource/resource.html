@@ -1,0 +1,10 @@
+<ion-view view-title="Resource">
+  <ion-content>
+    <h1>Resources</h1>
+    <ul class="list">
+      <a class="item" ng-repeat="item in vm.resource" ng-click="vm.go(item)">
+        {{item}}
+      </a>
+    </ul>
+  </ion-content>
+</ion-view>

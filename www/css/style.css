@@ -1,0 +1,26 @@
+/* Empty. Add your own CSS if you like */
+
+.canvas .scroll .canvas-container .canvas-container-scroll {
+  height: 100%;
+}
+
+.canvas-container-scroll {
+  overflow: scroll;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.diagram-constructor-container,
+.content-diagram .scroll,
+#map_content {
+  height: 100%;
+}
+
+#diagram-constructor {
+  position: relative;
+  min-height: calc(100% + 300px);
+}
+
+.content-diagram  .diagramInfo-title {
+  text-align: center;
+}
