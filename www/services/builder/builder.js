@@ -40,7 +40,12 @@
       child.css('position', 'absolute');
       child.css('top', el.y1 + 'px');
       child.css('left', el.x1 + 'px');
-      child.css('background', 'linear-gradient(to top,' + getColor(el.FillColor) + ', #fff)');
+      if(el.DataTable !== undefined){
+        child.css('background', 'linear-gradient(to top,' + 'rgba(204,0,0, 0.1)' + ', #fff)');
+      }
+      else{
+        child.css('background', 'linear-gradient(to top,' + getColor(el.FillColor) + ', #fff)');
+      }
       child.addClass('ActivityBlock');
       return child;
     }
@@ -50,7 +55,11 @@
       var icon = angular.element('<span class="header-icon-block"></span>');
       //<button ng-click="vm.goToResources()">
       if(el.DrillDown !== undefined){
-        var headerIconDownload = angular.element('<i class="icon ion-ios-cloud-download func"></i>');
+        var headerIconDownload = angular.element('<i class="icon ion-ios-cloud-download"></i>');
+        icon.append(headerIconDownload);
+      }
+      if(el.Attachment !== undefined){
+        var headerIconDownload = angular.element('<i class="icon ion-android-attach"></i>');
         icon.append(headerIconDownload);
       }
 
@@ -86,6 +95,9 @@
         else {
           footer = angular.element('<div></div>');
         }
+      }
+      if(el.DataTable !== undefined){
+        footer.css('background-color', '#CC0000');
       }
       footer.addClass('ActivityBlock-footer');
       return footer;
