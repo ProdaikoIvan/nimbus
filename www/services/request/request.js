@@ -10,7 +10,7 @@
         return{
             request:request
         };
-      
+
         ////////////////
         function request(urlPath, method, params, data) {
           $ionicLoading.show();
@@ -22,6 +22,7 @@
                 data: data
             }).then(function (data) {
                 defer.resolve(data);
+                console.log(data);
               $ionicLoading.hide();
             },function (dataError) {
                 defer.reject(dataError);

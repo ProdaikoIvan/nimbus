@@ -3,7 +3,8 @@
     <h1>Resources</h1>
     <ul class="list">
       <a class="item" ng-repeat="item in vm.resource" ng-click="vm.go(item)">
-        {{item}}
+        <h2>{{item.level}}</h2>
+        <p>{{item.description}}</p>
       </a>
     </ul>
   </ion-content>

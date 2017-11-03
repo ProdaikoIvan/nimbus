@@ -6,7 +6,7 @@ angular.module('starter.controllers')
 
     vm.go = go;
     function go(item) {
-      $stateParams.diagram = item;
+      $stateParams.diagram = item.level;
       console.log($stateParams);
       $state.go('app.diagram', $stateParams);
     }
